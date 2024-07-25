@@ -1,0 +1,53 @@
+<div class="poll-form-container">
+    <form [formGroup]="pollForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="questionText">Question</label>
+        <input
+          id="questionText"
+          formControlName="QuestionText"
+          type="text"
+          class="form-control"
+        />
+        <div
+          *ngIf="pollForm.get('QuestionText')?.invalid && pollForm.get('QuestionText')?.touched"
+          class="error"
+        >
+          Question is required
+        </div>
+      </div>
+  
+      <div formArrayName="choices" class="choices-group">
+        <label>Choices</label>
+        <div
+          *ngFor="let choice of choices.controls; let i = index"
+          [formGroupName]="i"
+          class="choice-item"
+        >
+          <input
+            type="text"
+            formControlName="choiceText"
+            class="form-control"
+            placeholder="Enter choice"
+          />
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="removeChoice(i)"
+            [disabled]="choices.length <= 1"
+          >
+            Remove
+          </button>
+        </div>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="addChoice()"
+        >
+          Add Choice
+        </button>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Add Poll</button>
+    </form>
+  </div>
+  

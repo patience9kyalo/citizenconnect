@@ -1,0 +1,14 @@
+<div class="incident-list">
+    <h2>List of Incidents</h2>
+    <ul>
+      <li *ngFor="let incident of incidents" class="incident-item">
+        <div class="incident-details">
+          <img [src]="incident.incidentImage" alt="Incident Image" class="incident-image">
+          <p><strong>Location:</strong> {{ incident.incidentLocation }}</p>
+          <p><strong>Status:</strong> {{ incident.incidentStatus }}</p>
+          <p><strong>Description:</strong> {{ incident.incidentDescription }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

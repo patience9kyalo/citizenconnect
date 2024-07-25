@@ -1,0 +1,50 @@
+.incident-list {
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 300px;
+  }
+  
+  .incident-list h2 {
+    font-size: 24px;
+    color: #f90c0c;
+    margin-bottom: 15px;
+  }
+  
+  .incident-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .incident-item {
+    border: 1px solid #030303;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fffdfd;
+  }
+  
+  .incident-item:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .incident-details {
+    margin-left: 10px;
+    align-items: center;
+  }
+  
+  .incident-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 2px;
+  }
+  
+  .incident-details p {
+    margin-bottom: 5px;
+  }
+  
+  .incident-details p strong {
+    font-weight: bold;
+  }
+  

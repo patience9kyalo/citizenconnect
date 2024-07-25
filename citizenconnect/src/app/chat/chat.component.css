@@ -1,0 +1,129 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 20px;
+  background-color: #000000;
+  width: 70%;
+  margin-left: 200px;
+  margin-top: 30px;
+  border-radius: 3px;
+  color: #fb0606;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  margin-top: 30px;
+  border-radius: 5px;
+  margin-left: 400px;
+}
+
+.message-container {
+  flex: 1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.message.received {
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.message.sent {
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message.sent .message-content {
+  background-color: #51943a;
+  color: white;
+}
+
+.message-content p {
+  margin: 5px 0;
+}
+
+.message-content .time {
+  font-size: 12px;
+  color: #000000;
+}
+
+.message.received .time {
+  align-self: flex-end;
+}
+
+.message.sent .time {
+  align-self: flex-start;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.chat-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.send-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .hero {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 20px;
+  }
+
+  .chat-container {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 20px;
+  }
+
+  .message-content {
+      max-width: 80%;
+  }
+}

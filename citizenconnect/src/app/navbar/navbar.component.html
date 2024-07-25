@@ -1,0 +1,31 @@
+<header class="header" [class.expanded]="isNavOpen">
+    <nav>
+        <img src="header.jpg" alt="" class="background-image">
+
+        <div class="nav-links" [class.active]="isNavOpen">
+            <a routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" *ngIf="auth.isLoggedIn() && Role === 'citizen','gvn'" class="nav-link" (click)="closeNav()">Home</a>
+            <a routerLink="adminhome" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'admin'" class="nav-link" (click)="closeNav()">Admin Home</a>
+            <a routerLink="adminusers" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'admin'" class="nav-link" (click)="closeNav()">Admin Users</a>
+            <a routerLink="adminreport" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'admin'" class="nav-link" (click)="closeNav()">Admin Report</a>
+            <a routerLink="chat ai" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'citizen'" class="nav-link" (click)="closeNav()">Chat AI</a>
+            <a routerLink="views" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'citizen'" class="nav-link" (click)="closeNav()">Views</a>
+            <a routerLink="viewssummary" routerLinkActive="active" *ngIf="auth.isLoggedIn()" class="nav-link" (click)="closeNav()"> Views Summary</a>
+            <a routerLink="report" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'citizen'" class="nav-link" (click)="closeNav()">Add A Report</a>
+            <a routerLink="reports" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'citizen'" class="nav-link" (click)="closeNav()">See All Reports</a>
+            <a routerLink="gvnincidents" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'gvn'" class="nav-link" (click)="closeNav()">Reported Incidents</a>
+            <a routerLink="polls" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'citizen'" class="nav-link" (click)="closeNav()">Polls</a>
+            <a routerLink="addpolls" routerLinkActive="active" *ngIf="auth.isLoggedIn() && Role === 'gvn'" class="nav-link" (click)="closeNav()">Add Polls</a>
+            <a routerLink="login" routerLinkActive="active" *ngIf="!auth.isLoggedIn()" class="nav-link" (click)="closeNav()">LogIn</a>
+            <!-- <a routerLink="forgotpassword" routerLinkActive="active" *ngIf="!auth.isLoggedIn()" class="nav-link" (click)="closeNav()">Forgot Password</a> -->
+            <a routerLink="register" routerLinkActive="active" *ngIf="!auth.isLoggedIn()" class="nav-link" (click)="closeNav()">Register</a>
+            <a routerLink="" (click)="logout(); closeNav()" *ngIf="auth.isLoggedIn()" class="nav-link">LogOut</a>
+        </div>
+
+        <img src="menu.png" alt="" class="menubtn" (click)="toggleNav()">
+
+        <div class="header-content">
+            <img src="FLAG.png" alt="Logo" class="logo">
+            <h1 class="site-title">CitizenConnect<br>360</h1>
+        </div>
+    </nav>
+</header>

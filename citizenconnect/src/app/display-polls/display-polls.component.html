@@ -1,0 +1,12 @@
+<h2>Polls</h2>
+<div class="poll-container" *ngFor="let poll of pollsWithChoices">
+  <div class="poll-question">
+    <h3>{{ poll.poll.QuestionText }}</h3>
+  </div>
+  <ul class="poll-choices">
+    <li *ngFor="let choice of poll.choiceArray">
+      <span class="choice-text">{{ choice.ChoicesText }}</span> 
+      <button class="vote-button" (click)="vote(choice.ChoicesId, poll.poll.QuestionId)">Vote</button>
+    </li>
+  </ul>
+</div>

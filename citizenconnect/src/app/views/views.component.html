@@ -1,0 +1,31 @@
+<div class="views-container">
+  <!-- Form for adding a new view -->
+  <h2>Add New View</h2>
+  <form [formGroup]="viewForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="viewDescription">Your view</label>
+      <textarea
+        id="description"
+        formControlName="viewDescription"
+        placeholder="Type here"
+      ></textarea>
+      <!-- Error message if description is not provided -->
+      <div *ngIf="viewForm.get('viewDescription')?.invalid && viewForm.get('viewDescription')?.touched">
+        Description is required.
+      </div>
+    </div>
+
+    <!-- Button to submit the form -->
+    <button type="submit" [disabled]="viewForm.invalid">Add View</button>
+  </form>
+
+  <!-- Display list of views -->
+  <h2>Views List</h2>
+    <div *ngFor="let view of views">
+      <strong>view:</strong> {{ view.viewDescription }}
+    </div>
+
+  <!-- Button to navigate to the view summary -->
+  <button (click)="goToViewSummary()">Go to View Summary</button>
+</div>

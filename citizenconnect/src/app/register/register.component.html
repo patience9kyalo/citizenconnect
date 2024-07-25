@@ -1,0 +1,103 @@
+<div class="registercontainer">
+    <div class="registerpage">
+        <h2>WELCOME TO CITIZENCONNECT 360</h2>
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input id="Name" formControlName="Name" placeholder="Enter your Name">
+                <div *ngIf="registerForm.get('Name')?.touched && registerForm.get('Name')?.invalid">
+                    <small *ngIf="registerForm.get('Name')?.errors?.['required']">Name is required</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input id="Email" formControlName="Email" placeholder="Enter your Email">
+                <div *ngIf="registerForm.get('Email')?.touched && registerForm.get('Email')?.invalid">
+                    <small *ngIf="registerForm.get('Email')?.errors?.['required']">Email is required</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" formControlName="Password" placeholder="Enter your Password">
+                <div *ngIf="registerForm.get('Password')?.touched && registerForm.get('Password')?.invalid">
+                    <small *ngIf="registerForm.get('Password')?.errors?.['required']">Password is required</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select id="role" formControlName="Role">
+                    <option value="citizen">citizen</option>
+                    <option value="gvn">gvn</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <div class="terms-container">
+                    <div class="terms-content">
+                        <h3>Terms and Conditions</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget risus eu purus consequat
+                            consequat. Proin condimentum justo vel erat iaculis, at fringilla justo mollis. Phasellus in
+                            sem ac dui tincidunt facilisis. Quisque dapibus euismod metus, at laoreet nulla iaculis sed.
+                            Ut hendrerit posuere augue non faucibus. Aenean et neque in ligula efficitur scelerisque.
+                            Mauris eget ligula non augue faucibus mollis ut et mauris. Proin ultrices ipsum ac lobortis
+                            euismod. Vestibulum euismod mi nec libero auctor, vitae consequat neque pharetra. Nulla nec
+                            interdum libero. Nam lobortis libero vel nisl tincidunt, nec rhoncus lectus finibus. Aenean
+                            varius dui eu lorem consectetur dictum. Vivamus et metus sed elit fermentum hendrerit at id
+                            dolor. Sed maximus libero sit amet eleifend consequat.
+                        </p>
+                        <p>
+                            Fusce eu lacus et odio bibendum feugiat. Sed bibendum dui eu massa blandit, quis dignissim
+                            nisi tincidunt. Nam ut sem nec nisl vestibulum scelerisque. Nunc euismod sapien a nunc
+                            ullamcorper convallis. Curabitur in ex vitae magna tincidunt congue. Integer eget nisi id
+                            nisl tincidunt malesuada. Nam non nunc at ex convallis convallis sed nec nisl. Nunc iaculis
+                            tincidunt nunc, non efficitur elit posuere nec. Integer eu risus et enim laoreet ultricies.
+                            Pellentesque nec dui faucibus, auctor orci id, eleifend metus. Integer quis fermentum nulla,
+                            ac convallis velit. Aliquam a pellentesque leo.
+                        </p>
+                        <p>
+                            Sed sollicitudin et elit non venenatis. Duis vel nulla vel velit malesuada congue. Ut
+                            sagittis tortor nunc, nec feugiat purus tincidunt sit amet. Nam ut tortor sed elit congue
+                            feugiat. Suspendisse vitae ultrices lectus. In ac ligula auctor, tristique mauris nec,
+                            luctus mauris. Morbi maximus felis vel est fermentum, a iaculis mi facilisis. Fusce
+                            tincidunt augue non nisl sollicitudin dapibus. Phasellus fermentum lacus sed odio eleifend,
+                            ac gravida lacus consectetur. Vivamus id diam justo.
+                        </p>
+                        <p>
+                            Integer ut dolor non purus consectetur posuere. Aliquam erat volutpat. Curabitur tincidunt
+                            congue turpis, nec condimentum urna efficitur in. Mauris blandit, magna ac condimentum
+                            molestie, neque elit iaculis libero, sed ullamcorper magna neque sit amet leo. Curabitur
+                            euismod nulla nec varius vulputate. Curabitur nec metus in eros tincidunt suscipit. Nullam
+                            ornare risus et libero dictum, id congue ligula dictum. Aliquam fringilla nulla nec velit
+                            vestibulum, ac euismod est hendrerit. Sed scelerisque nulla in nisi tempus, nec posuere
+                            risus varius. Aenean efficitur urna quis elit egestas, et volutpat odio auctor. Aenean
+                            fermentum justo magna, non lacinia lectus efficitur vel. Sed nec lorem rutrum, vehicula quam
+                            sit amet, luctus ex. Vestibulum lacinia vehicula metus, eget scelerisque nulla. Integer
+                            auctor dui in sodales aliquam.
+                        </p>
+                    </div>
+
+                </div>
+                <label class="checkbox-label">
+                    <input type="checkbox" formControlName="AcceptTerms" (change)="onTermsAccepted($event)"><br>
+                    <span class="checkbox-text">I accept the terms and conditions</span>
+                    <div *ngIf="registerForm.get('AcceptTerms')?.touched && registerForm.get('AcceptTerms')?.invalid">
+                        <small *ngIf="registerForm.get('AcceptTerms')?.errors?.['required']">AcceptTerms is
+                            required</small>
+                    </div>
+                </label>
+
+            </div>
+
+            <button type="submit">Register</button>
+            <div *ngIf="errorMessage" class="message">{{ errorMessage }}</div>
+
+            <p>Already Registered?</p><br>
+            <a routerLink="login" routerLinkActive="active">LOGIN</a>
+        </form>
+    </div>
+</div>

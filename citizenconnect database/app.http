@@ -1,0 +1,199 @@
+POST http://localhost:4000/users/register
+Content-Type: application/json
+
+{
+    "Name":"admin",
+    "Email":"for@gmail.com",
+    "Password":"Admin@577",
+    "Role":"admin"
+}
+
+
+####
+POST http://localhost:4000/users/login
+Content-Type: application/json
+
+{
+    "Email":"joe@gmail.com",
+    "Password":"Peshy@577"
+}
+
+
+####
+GET http://localhost:4000/users/fd827f81-7d51-4236-bf46-7ca7a85bbeba
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2MWRiMjMxZi1jNGFjLTQ4MmMtYmJlZS1lZTFiMjE2OGU0YWIiLCJJZCI6IjYxZGIyMzFmLWM0YWMtNDgyYy1iYmVlLWVlMWIyMTY4ZTRhYiIsIk5hbWUiOiJTdGluZSIsIlJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNDM5OCwiZXhwIjoxNzIxNjQ4Nzk4fQ.xvgPKU0X-AiBzWo02075qpuSabXLYg2Xtb0tBgPU7PE
+
+#####
+GET http://localhost:4000/users
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2MWRiMjMxZi1jNGFjLTQ4MmMtYmJlZS1lZTFiMjE2OGU0YWIiLCJJZCI6IjYxZGIyMzFmLWM0YWMtNDgyYy1iYmVlLWVlMWIyMTY4ZTRhYiIsIk5hbWUiOiJTdGluZSIsIlJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNDM5OCwiZXhwIjoxNzIxNjQ4Nzk4fQ.xvgPKU0X-AiBzWo02075qpuSabXLYg2Xtb0tBgPU7PE
+
+
+####
+GET http://localhost:4000/users/approve/new/new
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2MWRiMjMxZi1jNGFjLTQ4MmMtYmJlZS1lZTFiMjE2OGU0YWIiLCJJZCI6IjYxZGIyMzFmLWM0YWMtNDgyYy1iYmVlLWVlMWIyMTY4ZTRhYiIsIk5hbWUiOiJTdGluZSIsIlJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNDM5OCwiZXhwIjoxNzIxNjQ4Nzk4fQ.xvgPKU0X-AiBzWo02075qpuSabXLYg2Xtb0tBgPU7PE
+
+
+#####
+GET http://localhost:4000/users/reject/new/new
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2MWRiMjMxZi1jNGFjLTQ4MmMtYmJlZS1lZTFiMjE2OGU0YWIiLCJJZCI6IjYxZGIyMzFmLWM0YWMtNDgyYy1iYmVlLWVlMWIyMTY4ZTRhYiIsIk5hbWUiOiJTdGluZSIsIlJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNDM5OCwiZXhwIjoxNzIxNjQ4Nzk4fQ.xvgPKU0X-AiBzWo02075qpuSabXLYg2Xtb0tBgPU7PE
+
+####
+GET http://localhost:4000/users/approve/approve/72af0b64-fe88-40fa-91bc-e7e9e5aa86fd
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2MWRiMjMxZi1jNGFjLTQ4MmMtYmJlZS1lZTFiMjE2OGU0YWIiLCJJZCI6IjYxZGIyMzFmLWM0YWMtNDgyYy1iYmVlLWVlMWIyMTY4ZTRhYiIsIk5hbWUiOiJTdGluZSIsIlJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNDM5OCwiZXhwIjoxNzIxNjQ4Nzk4fQ.xvgPKU0X-AiBzWo02075qpuSabXLYg2Xtb0tBgPU7PE
+
+####
+GET http://localhost:4000/users/reject/reject/72af0b64-fe88-40fa-91bc-e7e9e5aa86fd
+
+
+######
+PATCH http://localhost:4000/users/fd827f81-7d51-4236-bf46-7ca7a85bbeba
+Content-Type: application/json
+
+{
+    "Name":"Peshy",
+    "Email":"peshynduku@gmail.com",
+    "Password":"Peshy@577",
+    "Role":"citizen"
+}
+
+
+######
+DELETE http://localhost:4000/users/82bbaff4-8fc9-4239-8329-14ec39787f0a
+
+//INCIDENTS
+
+#####
+POST http://localhost:4000/incidents
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2NGE2MjNhMi0xMzE3LTQ5NGEtOTQ1MC1hNTc3OWQyZmUxMDciLCJJZCI6IjY0YTYyM2EyLTEzMTctNDk0YS05NDUwLWE1Nzc5ZDJmZTEwNyIsIk5hbWUiOiJOamVuZ2EiLCJSb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTYzNzE5NSwiZXhwIjoxNzIxNjUxNTk1fQ.xiT9_WEyGSgI_9B7SRzms0ctWTYOAoXBMTv7AqJSUBs
+
+{
+    "incidentLocation": "Nanyuki",
+    "incidentStatus": "Bad terrible situation",
+    "incidentDescription": "People died",
+    "incidentImage": "https://cdn.pixabay.com/photo/2024/07/11/10/30/bird-8887800_640.jpg"
+}
+
+
+####
+GET http://localhost:4000/incidents
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM0NTU5LCJleHAiOjE3MjE2NDg5NTl9.Rqi8nqI255emIT2RYpQcnGQed5yTulDpoU8GMEL_nYU
+
+######
+GET http://localhost:4200/incidents/7b78aa68-8499-42bc-b5d3-59bb777bf230
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM0OTA3LCJleHAiOjE3MjE2NDkzMDd9.4chyAgFjMK6MAL-uKPUua1iaeUD6AY7RwKQ7uNYo58g
+
+#####
+
+DELETE http://localhost:4200/incidents/225d23df-f225-4045-945d-1c50aa07335d
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM0OTA3LCJleHAiOjE3MjE2NDkzMDd9.4chyAgFjMK6MAL-uKPUua1iaeUD6AY7RwKQ7uNYo58g
+
+#######
+PATCH  http://localhost:4200/incidents/7b78aa68-8499-42bc-b5d3-59bb777bf230
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM0OTA3LCJleHAiOjE3MjE2NDkzMDd9.4chyAgFjMK6MAL-uKPUua1iaeUD6AY7RwKQ7uNYo58g
+
+{
+    "incidentLocation": "Nakuru",
+    "incidentStatus": "Emergency",
+    "incidentDescription": "many people injured",
+    "incidentImage": "https://cdn.pixabay.com/photo/2024/07/11/10/30/bird-8887800_640.jpg",
+    "Id": "02a00ad7-1b08-4304-a9ae-7f7b7e3eaf15"
+}
+
+//VIEWS
+
+######
+POST http://localhost:4000/views
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM0OTA3LCJleHAiOjE3MjE2NDkzMDd9.4chyAgFjMK6MAL-uKPUua1iaeUD6AY7RwKQ7uNYo58g
+
+
+{
+
+    "viewDescription": "We should just elect new people to the current government."
+}
+
+####
+GET http://localhost:4000/views
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM0OTA3LCJleHAiOjE3MjE2NDkzMDd9.4chyAgFjMK6MAL-uKPUua1iaeUD6AY7RwKQ7uNYo58g
+
+
+#####
+GET http://localhost:4000/views/45f3770c-c1c4-47b0-b50c-058caf19921b
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM0OTA3LCJleHAiOjE3MjE2NDkzMDd9.4chyAgFjMK6MAL-uKPUua1iaeUD6AY7RwKQ7uNYo58g
+
+
+
+#####
+PATCH http://localhost:4200/views/4bdde08a-50f8-4711-bf64-19522c7d4815
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM0OTA3LCJleHAiOjE3MjE2NDkzMDd9.4chyAgFjMK6MAL-uKPUua1iaeUD6AY7RwKQ7uNYo58g
+
+
+{
+
+    "viewDescription": "We think kicking the current government out of office is the only solution for our country right now.",
+    "Id": "02a00ad7-1b08-4304-a9ae-7f7b7e3eaf15"
+}
+
+######
+DELETE  http://localhost:4200/views/35f84d16-fe8d-4a73-8994-4a88a39b8625
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM0OTA3LCJleHAiOjE3MjE2NDkzMDd9.4chyAgFjMK6MAL-uKPUua1iaeUD6AY7RwKQ7uNYo58g
+
+//POLL QUESTIONS
+
+#####
+POST http://localhost:4000/pollQuestions
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiIyY2EwZDc5Zi1iNTE5LTQyYWUtOTZiNC03M2Y2ZjA1ZTE0NjYiLCJJZCI6IjJjYTBkNzlmLWI1MTktNDJhZS05NmI0LTczZjZmMDVlMTQ2NiIsIk5hbWUiOiJTdGluZSIsIlJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNjI0OSwiZXhwIjoxNzIxNjUwNjQ5fQ.LllFMr8_-EGvdxuc0Bm5THivATTvTDLDcg5oxQHKfC0
+
+{
+
+    "QuestionText": "What do you think of the President's work as of now?",
+    "choices": ["yes","no"]
+  
+}
+
+
+######
+GET http://localhost:4000/pollQuestions
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiIyY2EwZDc5Zi1iNTE5LTQyYWUtOTZiNC03M2Y2ZjA1ZTE0NjYiLCJJZCI6IjJjYTBkNzlmLWI1MTktNDJhZS05NmI0LTczZjZmMDVlMTQ2NiIsIk5hbWUiOiJTdGluZSIsIlJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNjE4MywiZXhwIjoxNzIxNjUwNTgzfQ.LZiGJsF2IENI6ihTrZ1VrL0gbYQ6COm3vTJ-teMbZeo
+
+
+#####
+GET http://localhost:4200/pollQuestions/5520663e-b99b-406a-a7bb-fba313cd7482
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmMzM5OTY3Mi00YTBiLTQ2ODUtODk0MS02MmI3NWQ2MmMzNTciLCJJZCI6ImYzMzk5NjcyLTRhMGItNDY4NS04OTQxLTYyYjc1ZDYyYzM1NyIsIk5hbWUiOiJTdGV2ZSIsIlJvbGUiOiJjaXRpemVuIiwiaWF0IjoxNzIxNjM2MTMwLCJleHAiOjE3MjE2NTA1MzB9.n-dR7RqpTP9uSapap2GU60LwG9gRg69hAMm87PGb0mM
+
+#####
+GET http://localhost:4000/pollQuestions
+
+//POLL VOTES
+
+####
+POST  http://localhost:4200/pollVotes
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2NGE2MjNhMi0xMzE3LTQ5NGEtOTQ1MC1hNTc3OWQyZmUxMDciLCJJZCI6IjY0YTYyM2EyLTEzMTctNDk0YS05NDUwLWE1Nzc5ZDJmZTEwNyIsIk5hbWUiOiJOamVuZ2EiLCJSb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTYzNjQ1NiwiZXhwIjoxNzIxNjUwODU2fQ.mZpXsMeNTxMfdPJkUK-78Z2az3ghdg9Wi6tIz4-QKyE
+
+{
+
+    "ChoicesId":"341738d7-4c6d-42fb-b180-e60dda4246b1",
+    "QuestionId": "02d47313-da83-4917-836e-e420c98e391d",
+    "Id": "f3399672-4a0b-4685-8941-62b75d62c357",
+    "VoteCount":"1"
+}
+
+#####
+GET http://localhost:4200/pollVotes/f3399672-4a0b-4685-8941-62b75d62c357
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2NGE2MjNhMi0xMzE3LTQ5NGEtOTQ1MC1hNTc3OWQyZmUxMDciLCJJZCI6IjY0YTYyM2EyLTEzMTctNDk0YS05NDUwLWE1Nzc5ZDJmZTEwNyIsIk5hbWUiOiJOamVuZ2EiLCJSb2xlIjoiY2l0aXplbiIsImlhdCI6MTcyMTYzNjQ1NiwiZXhwIjoxNzIxNjUwODU2fQ.mZpXsMeNTxMfdPJkUK-78Z2az3ghdg9Wi6tIz4-QKyE
+
+
+
+//VOTE COUNT 
+
+######
+GET http://localhost:4200/voteCount/6f21317c-d2db-42eb-8b39-d642a2638e23
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiI2MWRiMjMxZi1jNGFjLTQ4MmMtYmJlZS1lZTFiMjE2OGU0YWIiLCJJZCI6IjYxZGIyMzFmLWM0YWMtNDgyYy1iYmVlLWVlMWIyMTY4ZTRhYiIsIk5hbWUiOiJTdGluZSIsIlJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNDM5OCwiZXhwIjoxNzIxNjQ4Nzk4fQ.xvgPKU0X-AiBzWo02075qpuSabXLYg2Xtb0tBgPU7PE
+
+
+

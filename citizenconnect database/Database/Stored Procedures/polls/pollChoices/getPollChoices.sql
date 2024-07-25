@@ -1,0 +1,5 @@
+CREATE OR ALTER PROCEDURE getPollChoices
+AS 
+BEGIN 
+SELECT * FROM pollChoice WHERE IsDeleted = 0
+END

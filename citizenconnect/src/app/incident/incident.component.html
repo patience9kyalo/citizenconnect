@@ -1,0 +1,33 @@
+<div class="incidentcontainer">
+    <div class="incidentpage">
+      <h2>WELCOME TO CITIZENCONNECT 360</h2>
+  
+      <form [formGroup]="incidentForm" (ngSubmit)="onSubmit()">
+  
+        <div class="form-group">
+          <label for="incidentLocation">Incident Location:</label>
+          <input id="incidentLocation" formControlName="incidentLocation" placeholder="Enter the Location">
+        </div>
+  
+        <div class="form-group">
+          <label for="incidentStatus">Incident Status:</label>
+          <input id="incidentStatus" formControlName="incidentStatus" placeholder="Enter the Status">
+        </div>
+  
+        <div class="form-group">
+          <label for="incidentDescription">Incident Description:</label>
+          <textarea id="incidentDescription" formControlName="incidentDescription" placeholder="Enter the Description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="incidentImage">Image URL:</label>
+          <input type="text" id="incidentImage" formControlName="incidentImage">
+        </div>
+
+  
+        <button type="submit">Submit</button>
+      </form>
+  
+    </div>
+  </div>
+  
